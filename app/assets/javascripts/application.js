@@ -11,5 +11,15 @@
 // about supported directives.
 //
 //= require rails-ujs
+
+// next 2 lines added 20 jul 17 (must be above turbolinks) for adding bootstrap - restart rails server after saving file (step 4)
+//= require jquery
+//= require jquery_ujs
+
 //= require turbolinks
+
+// next 2 lines added 20 jul 17 (must be between turbolinks and require_tree) for adding bootstrap (step 4)
+//= require tether
+//= require bootstrap-sprockets
+
 //= require_tree .
