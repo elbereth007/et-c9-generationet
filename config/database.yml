@@ -1,3 +1,5 @@
+# firehose track 7, step 1 - file created 20 jul 17 for solo GenET project
+#
 # PostgreSQL. Versions 9.1 and up are supported.
 #
 # Install the pg driver:
@@ -86,6 +88,6 @@ test:
 production:
   <<: *default
   database: genet_production
-  # next 2 lines commented out for colo GenET prohect
+  # next 2 lines commented out 20 jul 17 for solo GenET project
   #username: genet
   #password: <%= ENV['GENET_DATABASE_PASSWORD'] %>
