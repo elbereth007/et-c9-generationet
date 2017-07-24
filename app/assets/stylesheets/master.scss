@@ -8,7 +8,7 @@
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 200;
   box-shadow: 10px 10px 5px #2a2a2a;
-  background: image_url('cartographer_@2X.png');
+  background: image_url('topnav_cartographer_@2X.png');
 }
 
 // added 23 jul 17 for styling nav bar (step 6)
@@ -16,4 +16,38 @@
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 100;
   color: #A31F34;   // mit's official cardinal color
+}
+
+// added 23 jul 17 for hero section (step 7)
+.hero {
+  background: image_url('hero_paul-morris-144777.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 370px;
+  box-shadow: 0px 3px 8px #2a2a2a;
+}
+
+// added 23 jul 17 for hero section (step 7)
+h1, h2, h3, h4, h5, h6, .navbar {
+  margin: 0;                          // removes extra whitespace between hero section and top nav bar
+}
+
+// added 23 jul 17 for hero section (step 7)
+.frosty {
+  background: rgba(0, 0, 0, 0.5);    // semi-transparent box within hero box on landing page
+  color: white;
+}
+
+.frosty h1 {
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 100;
+  text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
+}
+
+.frosty h2 {
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 200;
+  text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
 }
