@@ -1,5 +1,8 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  
+  # next line added 25 jul 17 solo GenET project adding devise for user authentication (step 10)
+  config.action_mailer.default_url_options = { host: 'firehose3-elbereth007.c9users.io' }
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development

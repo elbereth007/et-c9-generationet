@@ -64,3 +64,6 @@ end
 
 # added 23 jul 17 for adding simple form (step 9)
 gem 'simple_form'
+
+# added 25 jul 17 for adding devise for user authentication (step 10)
+gem 'devise'

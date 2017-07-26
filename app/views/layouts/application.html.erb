@@ -37,6 +37,14 @@
       </div>
     </nav>
     
+<!-- next 6 lines added 25 jul 17 for solo GenET project user authentication (step 10) -->
+    <% if notice.present? %>
+      <p class="alert alert-info"><%= notice %></p>       <!-- alert class is bootstrap styling -->
+    <% end %>
+    <% if alert.present? %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+    
     <%= yield %>
   </body>
 </html>

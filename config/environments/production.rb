@@ -1,5 +1,8 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  
+  # next line added 25 jul 17 solo GenET project adding devise for user authentication (step 10)
+  config.action_mailer.default_url_options = { host: 'genet-victor-christensen.herokuapp.com' }
 
   # Code is not reloaded between requests.
   config.cache_classes = true
