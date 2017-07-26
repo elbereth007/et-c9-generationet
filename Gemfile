@@ -67,3 +67,6 @@ gem 'simple_form'
 
 # added 25 jul 17 for adding devise for user authentication (step 10)
 gem 'devise'
+
+# added 26 jul 17 for adding genealogy capabilities
+gem 'genealogy'
