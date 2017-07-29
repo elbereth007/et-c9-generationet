@@ -1,0 +1,21 @@
+<!-- firehose track 7, step 14 - file created 28 jul 17 for solo GenET project creating person form -->
+
+<div class="booyah-box col-10 offset-1">
+  
+  <h1>Enter Your Person Details</h1>
+  <%= simple_form_for @person do |f| %>
+    <%= f.input :first_name %>
+    <%= f.input :middle_name %>
+    <%= f.input :last_name %>
+    <%= f.input :sex %>
+    <%= f.input :birth_date %>
+    <%= f.input :death_date %>
+    <%= f.input :father_id %>
+    <%= f.input :mother_id %>
+    <%= f.input :current_spouse_id %>
+    <%= f.input :notes %>
+    <br />
+    <%= f.submit 'Create', class: 'btn btn-primary' %>
+  <% end %>
+  
+</div>

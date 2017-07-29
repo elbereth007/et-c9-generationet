@@ -9,7 +9,7 @@ class CreatePeople < ActiveRecord::Migration[5.1]
       t.integer :current_spouse_id
       t.integer :birth_date
       t.integer :death_date
-
+      
       t.timestamps
     end
   end

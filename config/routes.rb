@@ -7,4 +7,7 @@ Rails.application.routes.draw do
 # next line added 20 jul 17 for solo GenET project landing page
   root 'landing_pages#index'    # hooks up landing page to index action - app/views/index.html.erb
   
+# next line added 28 jul 17 for solo GenET project creating person form
+  resources :people
+  
 end
