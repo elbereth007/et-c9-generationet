@@ -2,9 +2,8 @@
 
 class Person < ApplicationRecord
   
-# next line commented out 31 jul 17 after genealogy gem uninstalled
-#  has_parents 
+# next line added 2 aug 17 for solo GenET project connecting users to people (step 17)
+  belongs_to :user
+  
 end
 
-# find example using this gem
-# look in raw files for "has_parents"

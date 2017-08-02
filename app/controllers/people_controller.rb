@@ -1,14 +1,21 @@
 # firehose track 7, step 14 - file created 28 jul 17 for solo GenET project creating person form
 class PeopleController < ApplicationController
   
+# next line added 2 aug 17 so only authenticated/logged-in users can see trees (step 17)
+  before_action :authenticate_user!, only: [:new, :create]          # need a way to prevent user from seeing other users' trees
+  
   def new
     @person = Person.new
   end
   
 # create method added 28 jul 17 for making submit form create new person (step 15)
   def create
-    Person.create(person_params)
-    redirect_to new_person_path
+    
+# next line commented out and following line added 2 aug 17 for connecting users to people (step 17)
+#    Person.create(person_params)
+    current_user.people.create(person_params)
+    
+    redirect_to new_person_path       # change to redirect to page showing person created, maybe entire tree
   end
 
   private
