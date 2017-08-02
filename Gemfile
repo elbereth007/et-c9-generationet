@@ -70,3 +70,6 @@ gem 'devise'
 
 # added 26 jul 17 for adding genealogy capabilities, removed 31 jul 17 after errors pointed to its being the problem
 #gem 'genealogy'
+
+# added 1 aug 17 for ability to add plus sign to link
+gem "font-awesome-rails"
