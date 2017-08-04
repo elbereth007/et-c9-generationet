@@ -22,6 +22,18 @@
     <h3>Trace Our Family History</h3>
     <br />
     <p>...</p>
+    <br />
+    
+<!-- next 8 lines added 3 aug 17 to list all people's first/last names on landing pge (for now) (step 18) -->
+    <h3><%= @people.inspect %></h3>          <!-- displays "nil," why isn't this showing database entries? -->
+<!--    <% @people.each do |person| %>           doesn't like "each" (since @people is "nil" now?)
+      <div>
+        <h3><%= link_to person.first_name, person_path(person) %> + " " + <%= person.last_name %></h3>    <!-- how to make this link off entire name? -->
+        <br />
+      </div>
+      <hr />
+    <% end %> -->
+    
   </div>
 
   <div class="col-12 col-sm">

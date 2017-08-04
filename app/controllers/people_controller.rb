@@ -2,7 +2,12 @@
 class PeopleController < ApplicationController
   
 # next line added 2 aug 17 so only authenticated/logged-in users can see trees (step 17)
-  before_action :authenticate_user!, only: [:new, :create]          # need a way to prevent user from seeing other users' trees
+  before_action :authenticate_user!, only: [:new, :create]          # need a way to prevent user from seeing other users' trees; add :show later
+  
+# index method added 3 aug 17 to list all people on landing page (for now) (step 18)
+  def index
+    @people = Person.all
+  end
   
   def new
     @person = Person.new
@@ -16,6 +21,11 @@ class PeopleController < ApplicationController
     current_user.people.create(person_params)
     
     redirect_to new_person_path       # change to redirect to page showing person created, maybe entire tree
+  end
+  
+# show method added 3 aug 17 for person detail page (step 18)
+  def show
+    @person = Person.find(params[:id])
   end
 
   private
