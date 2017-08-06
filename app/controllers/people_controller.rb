@@ -27,6 +27,11 @@ class PeopleController < ApplicationController
   def show
     @person = Person.find(params[:id])
   end
+  
+# edit method added 5 aug 17 for editing person details (step 19)
+  def edit
+    @person = Person.find(params[:id])
+  end
 
   private
 

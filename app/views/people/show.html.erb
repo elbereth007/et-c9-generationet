@@ -2,4 +2,9 @@
 
 <div class="booyah-box col-10 offset-1">
   <h1><%= @person.first_name %> <%= @person.middle_name %> <%= @person.last_name %></h1>
+  
+<!-- edit button added 5 aug 17 for editing person details (step 19) -->
+  <div class="float-right">
+    <%= link_to 'Edit', edit_person_path(@person), class: 'btn btn-primary' %>
+  </div>
 </div>
