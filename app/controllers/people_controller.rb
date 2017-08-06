@@ -32,6 +32,13 @@ class PeopleController < ApplicationController
   def edit
     @person = Person.find(params[:id])
   end
+  
+# edit method added 6 aug 17 for updating person details (step 20)
+  def update
+    @person = Person.find(params[:id])
+    @person.update_attributes(person_params)        # not updating...but redirecting to correct page
+    redirect_to root_path
+  end
 
   private
 
