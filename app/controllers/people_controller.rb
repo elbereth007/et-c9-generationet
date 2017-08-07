@@ -18,8 +18,8 @@ class PeopleController < ApplicationController
     
 # next line commented out and following line added 2 aug 17 for connecting users to people (step 17)
 #    Person.create(person_params)
-    current_user.people.create(person_params)
-    
+    current_user.people.create(person_params)         # check nomster/flixter code in this area
+
     redirect_to new_person_path       # change to redirect to page showing person created, maybe entire tree
   end
   
@@ -36,6 +36,7 @@ class PeopleController < ApplicationController
 # edit method added 6 aug 17 for updating person details (step 20)
   def update
     @person = Person.find(params[:id])
+#    byebug
     @person.update_attributes(person_params)        # not updating...but redirecting to correct page
     redirect_to root_path
   end
@@ -44,7 +45,7 @@ class PeopleController < ApplicationController
 
 # person_params method added 28 jul 17 for making submit form create new person (step 15)
   def person_params
-    params.require(:person).permit(:first_name, :middle_name, :last_name, :sex, :birth_date, :death_date, :father_id, :mother_id, :current_spouse, :notes)
+    params.require(:person).permit(:first_name, :middle_name, :last_name, :sex, :birth_date, :death_date, :father_id, :mother_id, :current_spouse_id, :notes)
   end
   
 end

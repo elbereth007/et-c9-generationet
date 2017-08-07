@@ -3,6 +3,7 @@
 class LandingPagesController < ApplicationController
     
   def index
-  end
+    @people = Person.all      # *** need to change so only authenticated users can see only people they've created on a
+  end                         #     separate page, and unauthenticated/other authenticated users can't see them ***
   
 end
