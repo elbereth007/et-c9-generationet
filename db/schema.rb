@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170802204934) do
+ActiveRecord::Schema.define(version: 20170807235940) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,8 +20,6 @@ ActiveRecord::Schema.define(version: 20170802204934) do
     t.integer "father_id"
     t.integer "mother_id"
     t.integer "current_spouse_id"
-    t.integer "birth_date"
-    t.integer "death_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "first_name"
@@ -29,6 +27,11 @@ ActiveRecord::Schema.define(version: 20170802204934) do
     t.string "last_name"
     t.text "notes"
     t.integer "user_id"
+    t.string "father_name"
+    t.string "mother_name"
+    t.string "current_spouse_name"
+    t.date "birth_date"
+    t.date "death_date"
     t.index ["user_id"], name: "index_people_on_user_id"
   end
 

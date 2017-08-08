@@ -8,11 +8,16 @@
     <%= f.input :middle_name %>
     <%= f.input :last_name %>
     <%= f.input :sex %>
-    <%= f.input :birth_date %>
-    <%= f.input :death_date %>
-    <%= f.input :father_id %>
-    <%= f.input :mother_id %>
-    <%= f.input :current_spouse_id %>
+    
+<!-- birth/death dates changed 7 aug 17 to allow broader ranges of years in dropdown menus, can be absolute values (e.g., 1700) or dynamic (Time.now.year + 10) -->
+    <%= f.input :birth_date, start_year: 1700, end_year: Time.now.year, prompt: "Unknown" %> 
+    <%= f.input :death_date, start_year: 1700, end_year: Time.now.year, prompt: "Unknown/Living" %>   <!-- prompt: allows a "blank" entry, for someone who's still living -->
+    
+<!-- father/mother/spouse field names/datatypes changed from _id/integer to _name/string 7 aug 17 to be more logical -->
+    <%= f.input :father_name %>
+    <%= f.input :mother_name %>
+    <%= f.input :current_spouse_name %>
+    
     <%= f.input :notes %>
     <br />
     <%= f.submit 'Update', class: 'btn btn-primary' %>
